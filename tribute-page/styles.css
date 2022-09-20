@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    border-radius: 0.4rem;
+}
+
+p {
+    margin: 0 0 0.4rem 0;
+}
+
+a {
+    font-family: inherit;
+    font-style: inherit;
+}
+
+figure {
+    margin: 0;
+    padding: 0.8rem 0.4rem;
+    background-color: rgb(255, 255, 255);
+}
+
+figcaption {
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 1.4rem 0.4rem;
+}
+
+#summary {
+    text-align: center;
+}
+
+header {
+    padding: 0.4rem;
+}
+
+#tribute-info {
+    margin: 0 auto;
+}
+
+
+
+.oblique {
+    font-style: oblique;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+main {
+    background-color: rgb(248, 217, 114);
+    padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Verdana, sans-serif;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: unset;
+    display: block;
+}
+
+ul {
+    width: 60%;
+    min-width: 250px;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+.quote-container {
+    width: 60%;
+    min-width: 250px;
+    margin: 2.5rem auto;
+}
+
+.author::before {
+    content: "—";
+}
+
+#more-information {
+    text-align: center;
+    line-height: 1.5rem;
+}
