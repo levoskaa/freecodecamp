@@ -1,6 +1,7 @@
 :root {
   --background-color: #eee;
   --color: #000;
+  --secondary-color: #f1c40f;
   --font-family: "Lato", sans-serif;
 }
 
@@ -63,7 +64,46 @@ header > .logo {
 
 main {
   display: grid;
-  margin-top: 7rem;
+  grid-template-columns: minmax(0, 1fr) minmax(auto, 1000px) minmax(0, 1fr);
+  margin-top: 4.7rem;
+}
+
+main > .title {
+  font-size: 1.5rem;
+  grid-column: 2;
+  text-align: center;
+  margin-bottom: 1.3rem;
+}
+
+#sign-up-form {
+  grid-column: 2;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+input#email {
+  width: 100%;
+  max-width: 275px;
+  padding: 0.3em;
+}
+
+input#submit {
+  width: 100%;
+  max-width: 150px;
+  padding: 0.3em 0.5em;
+  background-color: var(--secondary-color);
+  border: none;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+main > .video {
+  grid-column: 2;
 }
 
 @media only screen and (max-width: 700px) {
@@ -75,10 +115,7 @@ main {
   #nav-bar ul {
     margin-left: 1.2rem;
     justify-content: start;
-  }
-
-  #nav-bar li {
-    margin-right: 1.5rem;
+    gap: 1.5rem;
   }
 }
 
