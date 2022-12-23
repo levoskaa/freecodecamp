@@ -1,9 +1,13 @@
 :root {
   --background-color: #eee;
-  --color: #000;
+  --ground-color-1: #ddd;
+  --text-color: #000;
   --secondary-color: #f1c40f;
   --accent: #ff8c00;
+  --hover-color: #ffa500;
   --font-family: "Lato", sans-serif;
+  --border-radius: 4px;
+  --ease-in: all 1s ease-in;
 }
 
 *,
@@ -98,14 +102,25 @@ input#email {
   padding: 0.3em;
 }
 
+.btn {
+  background-color: var(--secondary-color);
+  border: none;
+  text-transform: uppercase;
+  padding: 0.8em 1.4em;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: var(--ease-in);
+  background-color: var(--hover-color);
+}
+
 input#submit {
   width: 100%;
   max-width: 150px;
   padding: 0.3em 0.5em;
-  background-color: var(--secondary-color);
-  border: none;
   font-weight: 900;
-  text-transform: uppercase;
 }
 
 #features {
@@ -146,6 +161,56 @@ input#submit {
 #how-it-works #video {
   width: 100%;
   max-width: 560px;
+}
+
+#pricing {
+  grid-column: 2 / span 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(15rem, calc(100% / 3)));
+  gap: 1rem;
+}
+
+#pricing .product {
+  border: 1px solid #000;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#pricing .product-name {
+  text-transform: uppercase;
+  background-color: var(--ground-color-1);
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem 0;
+  font-weight: 700;
+}
+
+#pricing .product-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+#pricing .product-detail {
+  margin: 0.3rem 0;
+}
+
+#pricing .btn {
+  margin: 1.4rem 0 0.8rem 0;
+}
+
+@media only screen and (max-width: 800px) {
+  #pricing {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  #pricing .product {
+    width: 100%;
+    max-width: 20rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
