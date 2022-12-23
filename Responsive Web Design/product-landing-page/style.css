@@ -34,6 +34,7 @@ header {
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 4.7rem;
+  background-color: var(--background-color);
 }
 
 header > .logo {
@@ -71,13 +72,13 @@ header > .logo {
 }
 
 main {
-  padding: 0 1rem;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(auto, 1000px) minmax(0, 1fr);
   margin-top: 4.7rem;
 }
 
 main > .title {
+  padding: 0 1rem;
   font-size: 1.5rem;
   grid-column: 2 / span 1;
   text-align: center;
@@ -245,6 +246,11 @@ input#submit {
     margin-left: 1.2rem;
     justify-content: start;
     gap: 1.5rem;
+    padding-bottom: 0.4rem;
+  }
+
+  main {
+    margin-top: 6rem;
   }
 }
 
@@ -270,5 +276,10 @@ input#submit {
   #nav-bar ul {
     flex-direction: column;
     align-items: center;
+    gap: unset;
+  }
+
+  main {
+    margin-top: 9.5rem;
   }
 }
