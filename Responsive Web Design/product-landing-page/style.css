@@ -19,6 +19,10 @@
   padding: 0;
 }
 
+html {
+  scroll-padding-top: 6rem;
+}
+
 body {
   background-color: var(--background-color);
   font-family: var(--font-family);
@@ -265,6 +269,10 @@ input#submit {
 }
 
 @media only screen and (max-width: 375px) {
+  html {
+    scroll-padding-top: 9.5rem;
+  }
+
   #header {
     padding: 0;
   }
