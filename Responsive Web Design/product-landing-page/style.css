@@ -2,6 +2,7 @@
   --background-color: #eee;
   --color: #000;
   --secondary-color: #f1c40f;
+  --accent: #ff8c00;
   --font-family: "Lato", sans-serif;
 }
 
@@ -63,6 +64,7 @@ header > .logo {
 }
 
 main {
+  padding: 0 1rem;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(auto, 1000px) minmax(0, 1fr);
   margin-top: 4.7rem;
@@ -70,13 +72,14 @@ main {
 
 main > .title {
   font-size: 1.5rem;
-  grid-column: 2;
+  grid-column: 2 / span 1;
   text-align: center;
   margin-bottom: 1.3rem;
 }
 
 #sign-up-form {
-  grid-column: 2;
+  grid-column: 2 / span 1;
+  margin-bottom: 5rem;
 }
 
 #form {
@@ -102,8 +105,35 @@ input#submit {
   text-transform: uppercase;
 }
 
+#features {
+  grid-column: 2 / span 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+#features .feature {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#features .feature > i {
+  width: 20%;
+  text-align: center;
+  color: var(--accent);
+}
+
+#features .feature-text {
+  flex: 1 6 auto;
+}
+
+#features .feature-title {
+  font-size: 1.5rem;
+}
+
 main > .video {
-  grid-column: 2;
+  grid-column: 2 / span 1;
 }
 
 @media only screen and (max-width: 700px) {
@@ -116,6 +146,16 @@ main > .video {
     margin-left: 1.2rem;
     justify-content: start;
     gap: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #features .feature > i {
+    display: none;
+  }
+
+  #features .feature-text {
+    text-align: center;
   }
 }
 
