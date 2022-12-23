@@ -2,6 +2,7 @@
   --background-color: #eee;
   --ground-color-1: #ddd;
   --text-color: #000;
+  --text-secondary-color: #444;
   --secondary-color: #f1c40f;
   --accent: #ff8c00;
   --hover-color: #ffa500;
@@ -45,26 +46,28 @@ header > .logo {
   max-width: 280px;
 }
 
-#nav-bar {
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-}
-
-#nav-bar ul {
+.nav {
   list-style: none;
-  width: 100%;
   display: flex;
   justify-content: space-around;
 }
 
-#nav-bar li {
+.nav li {
   line-height: 1.5;
 }
 
-#nav-bar a {
+.nav a {
   text-decoration: none;
   color: var(--color);
+}
+
+#nav-bar {
+  display: flex;
+  align-items: center;
+}
+
+#nav-bar ul {
+  width: 100%;
 }
 
 main {
@@ -83,6 +86,7 @@ main > .title {
 
 main > section {
   margin-bottom: 5rem;
+  padding: 0 1rem;
 }
 
 #sign-up-form {
@@ -168,6 +172,7 @@ input#submit {
   display: grid;
   grid-template-columns: repeat(3, minmax(15rem, calc(100% / 3)));
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 #pricing .product {
@@ -199,6 +204,23 @@ input#submit {
 
 #pricing .btn {
   margin: 1.4rem 0 0.8rem 0;
+}
+
+#footer {
+  grid-column: 2 / span 1;
+  background-color: var(--ground-color-1);
+  text-align: right;
+  padding: 1rem;
+}
+
+#footer .nav {
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+#footer .copyright {
+  color: var(--text-secondary-color);
+  font-size: 0.9rem;
 }
 
 @media only screen and (max-width: 800px) {
