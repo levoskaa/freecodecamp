@@ -7,6 +7,7 @@
   --primary-white: var(--gallery);
   --primary-blue: var(--east-bay);
   --font-family: "Poppins", sans-serif;
+  --heading-font-family: 'Raleway', sans-serif;
 }
 
 *,
@@ -20,6 +21,7 @@ body {
   width: 100%;
   height: 100vh;
   font-family: var(--font-family);
+  color: var(--primary-white);
 }
 
 header {
@@ -69,4 +71,27 @@ header {
 
 #navbar li:hover {
   background-color: var(--primary-blue);
+}
+
+#welcome-section {
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(60deg, #3a3d40, #181719);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: var(--heading-font-family);
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+#welcome-section p {
+  color: var(--primary-red);
+  font-style: oblique;
+  font-size: 1.8rem;
+  font-weight: 200;
 }
