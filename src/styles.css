@@ -89,6 +89,10 @@ h1 {
   font-weight: 700;
 }
 
+#welcome-section h1 {
+  text-align: center;
+}
+
 #welcome-section p {
   color: var(--primary-red);
   font-style: oblique;
