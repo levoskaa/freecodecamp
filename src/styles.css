@@ -219,11 +219,21 @@ h2 {
 }
 
 @media only screen and (max-width: 460px) {
+  html {
+    font-size: 13px;
+  }
+
   header {
     padding: 0;
   }
 
   #navbar .nav {
     justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .projects-container {
+    grid-template-columns: 1fr;
   }
 }
