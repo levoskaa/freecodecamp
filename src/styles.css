@@ -1,7 +1,8 @@
 :root {
   --brick-red: #be3144;
+  --coral: #ff7f50;
   --gallery: #f0f0f0;
-  --east-bay: #45567D;
+  --east-bay: #45567d;
   --outer-space: #303841;
 
   --primary-red: var(--brick-red);
@@ -9,7 +10,7 @@
   --primary-blue: var(--east-bay);
   --primary-grey: var(--outer-space);
   --font-family: "Poppins", sans-serif;
-  --heading-font-family: 'Raleway', sans-serif;
+  --heading-font-family: "Raleway", sans-serif;
 }
 
 *,
@@ -35,7 +36,7 @@ header {
   padding-right: 2rem;
   background-color: var(--primary-red);
   color: var(--primary-white);
-  box-shadow: 0 0.125rem 0 rgba(0,0,0, 0.4);
+  box-shadow: 0 0.125rem 0 rgba(0, 0, 0, 0.4);
 }
 
 .nav {
@@ -85,15 +86,15 @@ a {
   align-items: center;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: var(--heading-font-family);
   font-weight: 700;
 }
 
-h1 {  
+h1 {
   font-size: 3.5rem;
 }
-
 
 h2 {
   font-size: 2.5rem;
@@ -134,7 +135,7 @@ h2 {
   display: block;
   background-color: var(--primary-grey);
   height: fit-content;
-  box-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0, 0.5);
+  box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
   border-radius: 0.125rem;
 }
 
@@ -148,6 +149,26 @@ h2 {
   text-align: center;
   font-size: 1.25rem;
   padding: 0.8rem 0.4rem;
+}
+
+.project-name::before,
+.project-name::after {
+  opacity: 0;
+  color: var(--coral);
+  transition: all 0.3s ease-out;
+}
+
+.project-name::before {
+  content: "< ";
+}
+
+.project-name::after {
+  content: " />";
+}
+
+.project-tile:hover .project-name::before,
+.project-tile:hover .project-name::after {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 460px) {
